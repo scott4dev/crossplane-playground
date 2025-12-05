@@ -1,4 +1,4 @@
-apiVersion: example.crossplane.io/v1
+apiVersion: example.crossplane.io/v1alpha1
 kind: XR
 metadata:
   name: example-xr

@@ -7,7 +7,7 @@ spec:
   names:
     kind: XR                       # the “Kind” of your XR
     plural: xrs                    # plural (lowercase) for the API endpoint
-  scope: Namespaced                # choose Namespaced (or Cluster as needed)
+  # scope: Namespaced                # choose Namespaced (or Cluster as needed)
   versions:
     - name: v1alpha1
       served: true
