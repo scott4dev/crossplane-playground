@@ -1,16 +1,16 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: compose-game-provider-with-python
+  name: compose-a-resource-with-python
 spec:
   compositeTypeRef:
-    apiVersion: playground.crossplane.io/v1
-    kind: GameProvider
+    apiVersion: example.crossplane.io/v1
+    kind: XR
   mode: Pipeline
   pipeline:
   - step: compose-a-resource-with-python
     functionRef:
-      name: function-compose-game-provider
+      name: function-python
     input:
       apiVersion: python.fn.crossplane.io/v1beta1
       kind: Script
@@ -18,11 +18,8 @@ spec:
         from crossplane.function.proto.v1 import run_function_pb2 as fnv1
 
         def compose(req: fnv1.RunFunctionRequest, rsp: fnv1.RunFunctionResponse):
-            # Here we create an S3 Bucket resource and set its region based on
-            # the region specified in the composite resource.
-            print (f"Request : {req}")
-            print (f"Response : {rsp}")
-
+            print (f"Request: {req}")
+            print (f"Response: {rsp}")
             # rsp.desired.resources["bucket"].resource.update({
             #     "apiVersion": "s3.aws.upbound.io/v1beta2",
             #     "kind": "Bucket",
