@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
   - xrd.yaml
-  # - xr.yaml
+  - xr.yaml
   # - functions.yaml
   # - composition.yaml
