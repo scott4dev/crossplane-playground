@@ -1,0 +1,15 @@
+apiVersion: playground.crossplane.io/v1
+kind: GameProvider
+metadata:
+  name: example-games
+spec:
+  id: 1234567890
+  url: https://games.example.com/foo/bar
+---
+apiVersion: playground.crossplane.io/v1
+kind: GameProvider
+metadata:
+  name: another-game-provider
+spec:
+  id: 9876543210
+  url: https://another.games/play/here
